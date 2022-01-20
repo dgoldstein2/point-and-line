@@ -13,5 +13,8 @@ public class TestPoint {
         int x = p3.manhattanDistance(p4);
         System.out.println(x);
         System.out.println(p2.isCollinear(p4,p5));
+        System.out.println(p2.isCollinear(p3,p4));
+        System.out.println(p1.isCollinear(p2,p6));
+        System.out.println(p1.isCollinear(p2,p3));
     }
 }

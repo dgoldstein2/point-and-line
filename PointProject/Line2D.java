@@ -30,6 +30,7 @@ public class Line2D {
         return x;
     }
     public double getSlope(){
+        
         double px1 = (double)(posx1);
         double px2 = (double)(posx2);
         double py1 = (double)(posy1);
@@ -37,8 +38,21 @@ public class Line2D {
         double f = py2 - py1;
         double h = px2 - px1;
         double fin = f/h;
+        
+        
         return fin;
+        
 
     }
+    public boolean isCollinear(Point p1){
+        if ((posx1 == p1.getX()) && (posx2 == p1.getX())){
+            
+        }
+
+
+        
+        
+    }
+
 
 }

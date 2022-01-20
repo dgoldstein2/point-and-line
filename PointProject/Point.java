@@ -30,33 +30,44 @@ public class Point {
         
     }
     public boolean isCollinear(Point p1, Point p2){
-        double f1 = (double)(positiony)-(double)(p1.getY());
-        System.out.println(f1);
+        if(positionx == p1.getX()){
+            if(positionx != p2.getX()){
+                return false;
+            }
+            else{
+                return true;
+            }
+        
+        }
+        else if(positionx == p2.getX()){
+            if(positionx != p1.getX()){
+                return false;
+            }
+            else{
+                return true;
+            }
 
-        double z1 = (double)(positionx)-(double)(p1.getX());
-        System.out.println(z1);
-        double b1 = f1/z1;
-        double f2 = (double)(positiony)-(double)(p2.getY());
-        System.out.println(f2);
-        double z2 = (double)(positionx)-(double)(p2.getX());
-        System.out.println(z2);
-        double b2 = f2/z2;
-        double f3 = (double)(p2.getY())-(double)(p1.getY());
-        System.out.println(f3);
-        double z3 = (double)(p2.getX())-(double)(p1.getX());
-        System.out.println(z3);
-        double b3 = f2/z2;
-
-
-        System.out.println(b1 + " " + b2 + " " + b3);
-        return false;
-        /*if (((f - z < .01) && (f - z > -.01) && (z - b < .01) && (z - b > -.01) && (b - f < .01) && (b - f > -.01))){
-            return true;
         }
         else{
-            return false;
+            double slope1x = (double) positionx - p1.getX();
+            double slope1y = (double) positiony - p1.getY();
+            double slope1 = slope1y/slope1x;
+            double slope2x = (double) positionx - p2.getX();
+            double slope2y = (double) positionx - p2.getY();
+            double slope2 = slope2y/slope2x;
+            double dif = Math.abs(slope1 - slope2);
+            if ((dif < .01) && (dif > -.01)){
+                return true;
+            }
+            else{
+                return false;
+            }
+
         }
-        */
+
+
+        
+        
     }
     
 
