@@ -24,12 +24,12 @@ public class Line2D {
     }
     public Point getP1(){
         
-        System.out.println("x= " + posx1 + "y= " + posy1);
+        
         return firP;
     }
     public Point getP2(){
         
-        System.out.println("x= " + posx2 + "y= " + posy2);
+        
         return SecP;
     }
     public String toString(){
