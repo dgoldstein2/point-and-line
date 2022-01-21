@@ -5,11 +5,16 @@ public class Line2D {
     private int posy1;
     private int posx2;
     private int posy2;
+    private Point firP = new Point(posx1, posy1);
+    private Point SecP = new Point(posx2, posy2);
+
     public Line2D(Point p1, Point p2){
         posx1 = p1.getX();
         posy1 = p1.getY();
         posx2 = p2.getX();
         posy2 = p2.getY();
+        firP = p1;
+        SecP = p2;
     }
     public Line2D(int x1, int y1, int x2, int y2){
         posx1 = x1;
@@ -18,18 +23,18 @@ public class Line2D {
         posy2 = y2;
     }
     public Point getP1(){
-        Point firP = new Point(posx1, posy1);
+        
         System.out.println("x= " + posx1 + "y= " + posy1);
         return firP;
     }
     public Point getP2(){
-        Point SecP = new Point(posx2, posy2);
+        
         System.out.println("x= " + posx2 + "y= " + posy2);
         return SecP;
     }
     public String toString(){
-        String x = "[(" + posx1 + "," +posy1+"), (" + posx2 + "," + posy2 + ")]";
-        return x;
+        return "[(" + posx1 + "," +posy1+"), (" + posx2 + "," + posy2 + ")]";
+        
     }
     public double getSlope(){
         
