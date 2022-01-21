@@ -19,10 +19,12 @@ public class Line2D {
     }
     public Point getP1(){
         Point firP = new Point(posx1, posy1);
+        System.out.println("x= " + posx1 + "y= " + posy1);
         return firP;
     }
     public Point getP2(){
         Point SecP = new Point(posx2, posy2);
+        System.out.println("x= " + posx2 + "y= " + posy2);
         return SecP;
     }
     public String toString(){
@@ -46,7 +48,22 @@ public class Line2D {
     }
     public boolean isCollinear(Point p1){
         if ((posx1 == p1.getX()) && (posx2 == p1.getX())){
+            return true;
+        }
+        else{
+            double slope2 = getSlope();
+            double slope1x = (double) posx2 - p1.getX();
+            double slope1y = (double) posy2 - p1.getY();
+            double slope1 = slope1y/slope1x;
             
+            
+            double dif = Math.abs(slope1 - slope2);
+            if ((dif < .01) && (dif > -.01)){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
 
 

@@ -20,6 +20,8 @@ public class TestLine2D {
         System.out.println(L3.getP2());
         System.out.println(L1.getSlope());
         System.out.println(L2.getSlope());
+        System.out.println(L1.isCollinear(p3));
+        System.out.println(L1.isCollinear(p4));
 
 
     }
